@@ -7,3 +7,4 @@ alias node='unalias node npm && load_nvm && node'
 alias npm='unalias node npm && load_nvm && npm'
 
 alias ls="ls --color=auto"
+alias l="ls -lh"
