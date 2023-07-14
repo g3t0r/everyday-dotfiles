@@ -1,0 +1,6 @@
+alias gl="git log --color=always | less -r"
+alias glo="git log --oneline"
+alias gs="git status -s"
+alias glos="git -c color.ui=always log --oneline --decorate | head"
+alias gb="git branch"
+alias gbc="git branch --show-current"
