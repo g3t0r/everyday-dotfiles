@@ -32,3 +32,5 @@ export EDITOR=nvim
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 alias config='/usr/bin/git --git-dir=/home/jan/.cfg/ --work-tree=/home/jan'
+
+export QSYS_ROOTDIR="/home/jan/Software/Quartus/files/quartus/sopc_builder/bin"

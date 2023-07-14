@@ -8,3 +8,4 @@ alias npm='unalias node npm && load_nvm && npm'
 
 alias ls="ls --color=auto"
 alias l="ls -lh"
+alias open="xdg-open"
