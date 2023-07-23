@@ -1,0 +1,6 @@
+qunzip() {
+	local escapedName="$1"
+	echo $escapedName
+	local folderName=$(echo $escapedName | sed -e 's/.zip//g')
+	unzip "$escapedName" -d "$folderName"
+}
