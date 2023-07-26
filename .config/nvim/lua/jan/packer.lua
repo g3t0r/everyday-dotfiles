@@ -33,7 +33,7 @@ return require('packer').startup(function(use)
             {                                      -- Optional
             'williamboman/mason.nvim',
             run = function()
-                pcall(vim.api.nvim_command, 'MasonUpdate')
+                pcall(vim.api.nvim_command, MasonUpdate')
             end,
         },
         {'williamboman/mason-lspconfig.nvim'}, -- Optional
