@@ -25,6 +25,11 @@ return require('packer').startup(function(use)
     use({'mbbill/undotree'})
 
     use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+    }
+
+    use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
         requires = {
@@ -33,7 +38,7 @@ return require('packer').startup(function(use)
             {                                      -- Optional
             'williamboman/mason.nvim',
             run = function()
-                pcall(vim.api.nvim_command, MasonUpdate')
+                pcall(vim.api.nvim_command, 'MasonUpdate')
             end,
         },
         {'williamboman/mason-lspconfig.nvim'}, -- Optional
@@ -43,9 +48,7 @@ return require('packer').startup(function(use)
         {'hrsh7th/cmp-nvim-lsp'}, -- Required
         {'L3MON4D3/LuaSnip'},     -- Required
     }
-    }
-
-    use {'ZhiyuanLck/smart-pairs', event = 'InsertEnter', config = function() require('pairs'):setup() end}
+}
 
     -- Lua
     use {
