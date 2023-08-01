@@ -53,6 +53,7 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "gr", function() require "telescope.builtin".lsp_references() end, opts)
   vim.keymap.set("n", "gd", function() require "telescope.builtin".lsp_definitions() end, opts)
   vim.keymap.set("n", "gi", function() require "telescope.builtin".lsp_implementations() end, opts)
+  vim.keymap.set("n", "<leader>o", function() vim.cmd.ClangdSwitchSourceHeader() end, opts)
 end)
 
 lsp.setup()
