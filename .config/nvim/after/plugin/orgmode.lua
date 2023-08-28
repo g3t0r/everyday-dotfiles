@@ -34,6 +34,7 @@ require('orgmode').setup({
       template = '\n*** [%<%Y-%m-%d>] \n**** [%<%H:%M>]%?',
       target = '~/notes/org/journal.org'
     },
-    t = { description = 'Task', template = '* TODO %?\n  %u' }
+    t = { description = 'Task', template = '* TODO %?\n  %u' },
+    n = { description = 'Note', template = '* %u %?' }
   }
 })
