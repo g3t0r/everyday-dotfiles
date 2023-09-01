@@ -36,5 +36,9 @@ require('orgmode').setup({
     },
     t = { description = 'Task', template = '* TODO %?\n  %u' },
     n = { description = 'Note', template = '* %u %?' }
+  },
+  org_todo_keywords = {'TODO', 'IN_PROGRESS', '|', 'DONE'},
+  org_todo_keyword_faces = {
+    IN_PROGRESS = ':foreground lightgreen'
   }
 })
