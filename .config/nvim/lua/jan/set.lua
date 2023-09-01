@@ -1,5 +1,6 @@
 vim.cmd('set rnu')
 vim.cmd('set nu')
+vim.cmd('set clipboard+=unnamedplus')
 
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
