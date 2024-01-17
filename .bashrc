@@ -43,6 +43,8 @@ export LESS=R
 source "$HOME/.aliases"
 export PS1="\u@\h:[\W]:> \[$(tput sgr0)\]"
 
+eval $(keychain --eval --quiet github)
+
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/jan/Software/google-cloud-cli-412.0.0-linux-x86_64/google-cloud-sdk/path.bash.inc' ]; then . '/home/jan/Software/google-cloud-cli-412.0.0-linux-x86_64/google-cloud-sdk/path.bash.inc'; fi
