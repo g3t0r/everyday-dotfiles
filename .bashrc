@@ -40,10 +40,18 @@ export NVM_DIR="$HOME/.nvm"
 export PAGER=less
 export LESS=R
 
-source "$HOME/.aliases"
-export PS1="\u@\h:[\W]:> \[$(tput sgr0)\]"
+#source "$HOME/.aliases"
+#export PS1="\u@\h:[\W]:> \[$(tput sgr0)\]"
 
-eval $(keychain --eval --quiet github)
+#eval $(keychain --eval --quiet github)
+#
+
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
+fi
+if [[ ! -f "$SSH_AUTH_SOCK" ]]; then
+    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+fi
 
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -51,3 +59,8 @@ if [ -f '/home/jan/Software/google-cloud-cli-412.0.0-linux-x86_64/google-cloud-s
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/jan/Software/google-cloud-cli-412.0.0-linux-x86_64/google-cloud-sdk/completion.bash.inc' ]; then . '/home/jan/Software/google-cloud-cli-412.0.0-linux-x86_64/google-cloud-sdk/completion.bash.inc'; fi
+
+
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

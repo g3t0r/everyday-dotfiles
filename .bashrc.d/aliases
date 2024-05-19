@@ -7,3 +7,7 @@ alias npm='unalias node npm && load_nvm && npm'
 
 alias ls="ls --color=auto"
 alias l="ls -lh"
+alias gci="git branch -a | awk '{print $1}'| sed -e \"s/remotes\/origin\///g\" | dmenu | xargs git checkout"
+alias news="newsboat"
+alias mocp=" mocp -T 30equals"
+alias vimf='vim `fzf`';

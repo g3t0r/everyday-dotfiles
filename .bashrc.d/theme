@@ -1,0 +1,2 @@
+PROMPT_COLOR="\033[1;38;5;105m"
+PS1="\[$PROMPT_COLOR\][\u@\h\[\033[01;37m\] \W\[$PROMPT_COLOR\]]\$\[\033[00m\] "
