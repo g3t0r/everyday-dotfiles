@@ -25,3 +25,5 @@ vim.opt.scrolloff = 8
 
 --vim.opt.colorcolumn = "80"
 
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
