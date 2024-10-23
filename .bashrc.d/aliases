@@ -11,3 +11,6 @@ alias gci="git branch -a | awk '{print $1}'| sed -e \"s/remotes\/origin\///g\" |
 alias news="newsboat"
 alias mocp=" mocp -T 30equals"
 alias vimf='vim `fzf`';
+alias v='vim';
+alias g='git';
+alias n='nnn -d';
